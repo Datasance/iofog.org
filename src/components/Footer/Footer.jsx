@@ -4,8 +4,6 @@ import { FaGithub, FaTwitter, FaSlack } from 'react-icons/fa';
 import './Footer.scss';
 import config from '../../../data/SiteConfig';
 
-import logoEdgeworx from '../../../static/images/logos/edgeworx.svg';
-import logoEclipse from '../../../static/images/logos/eclipse.svg';
 import siteLogo from '../../../static/images/logos/iofog.svg';
 import logoIoT from '../../../static/images/logos/iot.svg';
 import logoENWG from '../../../static/images/logos/enwg-logo.svg';
@@ -68,7 +66,7 @@ class Footer extends Component {
                     <a href="http://www.eclipse.org">Eclipse Foundation</a>
                   </div>
                 </div>
-                <div className="col-12 col-md-3 footer__by">
+                <div className="col-12 col-md-3 footer__links">
                   <h4>Contributors</h4>
                   <div className="item">
                     <a href="http://edgeworx.io/">
@@ -89,13 +87,9 @@ class Footer extends Component {
                       <img height="30" srcSet={logoIoT} alt="IoT Eclipse" />
                     </a>
                   </div>
-                  <div className="item">
-                    <a href="http://www.eclipse.org">
-                      <img
-                        srcSet={logoEclipse}
-                        alt="Eclipse Foundation Small"
-                      />
-                    </a>
+                  <div>
+                    <span className="chevron right" />
+                    <a href="http://www.eclipse.org">Eclipse foundation</a>
                   </div>
                 </div>
                 <div className="col-md-2 footer__follow">
