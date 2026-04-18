@@ -3,6 +3,7 @@
 // Core variables and mixins
 @import '~bootstrap/scss/_functions';
 @import '~bootstrap/scss/_variables';
+@import "~bootstrap/scss/maps";
 @import '~bootstrap/scss/_mixins';
 
 // Reset and dependencies
@@ -13,7 +14,8 @@
 //@import "~bootstrap/scss/_type";
 @import '~bootstrap/scss/_images';
 //@import "~bootstrap/scss/_code";
-// @import '~bootstrap/scss/_grid';
+@import '~bootstrap/scss/_containers';
+@import '~bootstrap/scss/_grid';
 @import '~bootstrap/scss/_tables';
 @import '~bootstrap/scss/_forms';
 //@import "~bootstrap/scss/_buttons";
@@ -44,5 +46,5 @@
 //@import "~bootstrap/scss/_carousel";
 
 // Utility classes
-@import "~bootstrap/scss/maps";
 @import '~bootstrap/scss/_utilities';
+@import '~bootstrap/scss/utilities/api';

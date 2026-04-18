@@ -5,8 +5,11 @@ import './Footer.scss';
 import config from '../../../data/SiteConfig';
 
 import siteLogo from '../../../static/images/logos/iofog.svg';
+import logoEdgeworx from '../../../static/images/logos/edgeworx.svg';
 import logoIoT from '../../../static/images/logos/iot.svg';
 import logoENWG from '../../../static/images/logos/enwg-logo.svg';
+import logoDatasance from '../../../static/images/logos/datasance.svg';
+import logoEclipse from '../../../static/images/logos/eclipse.svg';
 
 class Footer extends Component {
   render() {
@@ -66,30 +69,34 @@ class Footer extends Component {
                     <a href="http://www.eclipse.org">Eclipse Foundation</a>
                   </div>
                 </div>
-                <div className="col-12 col-md-3 footer__links">
+                <div className="col-12 col-md-3 footer__links footer__contributors">
                   <h4>Contributors</h4>
                   <div className="item">
-                    <a href="http://edgeworx.io/">
-                      <img srcSet={logoEdgeworx} alt="Edgeworx" />
-                    </a>
-                  </div>
-                  <div className="item enwg">
-                    <a href="http://edgenative.eclipse.org/">
+                    <a href="https://www.datasance.com/">
                       <img
-                        height="35"
-                        srcSet={logoENWG}
-                        alt="Edge Native Working Group"
+                        className="contributor-logo contributor-logo--datasance"
+                        srcSet={logoDatasance}
+                        alt="Datasance"
                       />
                     </a>
                   </div>
                   <div className="item">
                     <a href="https://iot.eclipse.org/">
-                      <img height="30" srcSet={logoIoT} alt="IoT Eclipse" />
+                      <img
+                        className="contributor-logo contributor-logo--iot"
+                        srcSet={logoIoT}
+                        alt="IoT Eclipse"
+                      />
                     </a>
                   </div>
-                  <div>
-                    <span className="chevron right" />
-                    <a href="http://www.eclipse.org">Eclipse foundation</a>
+                  <div className="item">
+                    <a href="http://www.eclipse.org">
+                      <img
+                        className="contributor-logo contributor-logo--eclipse"
+                        srcSet={logoEclipse}
+                        alt="Eclipse Foundation"
+                      />
+                    </a>
                   </div>
                 </div>
                 <div className="col-md-2 footer__follow">

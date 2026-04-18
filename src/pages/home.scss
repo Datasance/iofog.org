@@ -26,3 +26,32 @@
   opacity: 1;
   margin-bottom: 50px;
 }
+
+.schema {
+  padding-top: 12px;
+  padding-bottom: 8px;
+
+  &__image-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .schema {
+    padding-top: 8px;
+    padding-bottom: 6px;
+
+    &__image {
+      max-width: 540px;
+    }
+  }
+}

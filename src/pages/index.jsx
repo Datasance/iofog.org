@@ -21,44 +21,38 @@ class Index extends React.Component {
         <SEO />
 
         <HomeTitle />
-        <div class="home-section">
+        <div className="home-section">
           <WhatsNew />
         </div>
-        <div class="home-section">
-          <section class="schema">
+        <div className="home-section">
+          <section className="schema">
             <section className="container">
               <div className="sections__header">
                 <h4>ioFog bridges the gap between the Edge and the Cloud</h4>
               </div>
-              <div
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center'
-                }}
-              >
-                <img src={image} style={{ margin: 'auto', maxWidth: '75%' }} />
+              <div className="schema__image-wrap">
+                <img className="schema__image" src={image} alt="ioFog architecture diagram" />
               </div>
             </section>
           </section>
         </div>
-        <div class="home-section" style={{ '--bg-color': '#2FD7F033' }}>
+        <div className="home-section" style={{ '--bg-color': '#2FD7F033' }}>
           <AboutProject />
         </div>
-        <div class="home-section">
-          <section class="quote">
+        <div className="home-section">
+          <section className="quote">
             <section className="container">
-              <div class="home__quote">
+              <div className="home__quote">
                 “… K8s is great for 1 x 5,000 node cluster, ioFog is great for
                 5,000 x 1 nodes clusters and everything in between…”
               </div>
             </section>
           </section>
         </div>
-        {/* <div class="home-section">
+        {/* <div className="home-section">
           <InUse />
         </div> */}
-        <div class="home-section">
+        <div className="home-section">
           <Contributors />
         </div>
       </Layout>

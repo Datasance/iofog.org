@@ -10,12 +10,11 @@ class HomeTitle extends Component {
         <section className="container">
           <section className="row">
             <section className="col-12 col-md-6 promo">
-              <h1 className="title">
-                Manage your edge like it's in the cloud.
-              </h1>
+              <h1 className="title">EdgeOps at Scale.</h1>
               <p>
-                The free, open source way to deploy containerized apps across
-                any edge, and manage everything from the cloud.
+                Run, deploy, manage and distribute your workloads on the Edge.
+                Eclipse ioFog<sup>TM</sup> is <b>free, open source</b>, and it always
+                will be.
               </p>
             </section>
             <section className="col-12 col-md-6 code__container">
