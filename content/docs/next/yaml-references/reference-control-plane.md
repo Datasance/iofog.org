@@ -6,7 +6,7 @@
 
 <aside class="notifications danger">
   <h3><img src="/images/icos/ico-danger.svg" alt=""> iofogctl and ECN version compatibility</h3>
-    <p>You can connect to an older ECN with iofogctl +v1.6.1 for view-only purposes. If you would like full control over the ECN with iofogctl +v1.6.1, you should delete the ECN with your older iofogctl and then redeploy with iofogctl +v1.6.1 .</p>
+    <p><strong>iofogctl v3.7.0 is not compatible with older ECN versions.</strong> It cannot be used to manage legacy ECNs. To fully operate an older ECN, use the matching legacy iofogctl version. If you want to manage the environment with iofogctl v3.7.0, redeploy the ECN using the v3.7.0 control plane and resources.</p>
 </aside>
 
 ## Kubernetes Control Plane
