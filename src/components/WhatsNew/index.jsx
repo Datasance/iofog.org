@@ -1,60 +1,79 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'gatsby';
 import './index.scss';
 
-import icoLightning from '../../../static/images/icos/ico-lightning.svg';
-import icoSecurity from '../../../static/images/icos/ico-security.svg';
-import icoApps from '../../../static/images/icos/ico-apps.svg';
-
-const links = [
+const highlights = [
   {
-    label: 'Edge Resources',
+    tag: 'Messaging',
+    label: 'NATs-Native Edge Messaging',
     description:
-      'Easily organize & manage which apps can run on which sensors, cameras & physical edge devices',
-    href: ''
+      'Built-in pub/sub, request-reply, KV, and JetStream with account/user rules and automatic credential provisioning.',
+    href: '/docs/3.7/security/nats-jwt-authentication.html'
   },
   {
-    label: 'Application templates',
+    tag: 'Security',
+    label: 'Zero-Trust Access Control',
     description:
-      'Create application templates to share your edge app anywhere with anyone.',
-    href: ''
+      'Fine-grained RBAC for Controller APIs plus NATs authorization controls for secure multi-tenant edge operations.',
+    href: '/docs/3.7/security/introduction.html'
   },
   {
-    label: 'See the ioFog 3.0 Release notes',
+    tag: 'Networking',
+    label: 'Secure Service Interconnection',
     description:
-      'ioFog 3.0 has a few big new features and lots of stability and quality improvements. Check it out.',
-    href: ''
+      'Service resources enable resilient TCP bridge connectivity across Agents, Kubernetes services, and external endpoints.',
+    href: '/docs/3.7/yaml-references/reference-service.html'
+  },
+  {
+    tag: 'Operations',
+    label: 'Exec Sessions and Remote Debugging',
+    description:
+      'Role-aware interactive shells for Agents and workloads from both iofogctl and ECN Viewer, without key distribution.',
+    href: '/docs/3.7/getting-started/whats-new.html#debugging-and-exec-sessions'
+  },
+  {
+    tag: 'Experience',
+    label: 'ECN Viewer Operational Parity',
+    description:
+      'Day-2 lifecycle workflows in the browser: deployments, YAML edits, resource management, exec, and auditing.',
+    href: '/docs/3.7/ECN-Viewer/ecn-viewer.html'
+  },
+  {
+    tag: 'Platform',
+    label: 'Airgap and External KMS Support',
+    description:
+      'Deploy reliably in disconnected environments while integrating enterprise key management for Secrets and ConfigMaps.',
+    href: '/docs/3.7/platform-deployment/airgap-deployment.html'
   }
 ];
 
-class WhatsNew extends Component {
-  render() {
-    return (
-      <section className="">
-        <section className="container">
-          <section className="row">
-            <section className="col-12">
-              <div className="sections__header">
-                <h4>What's new in ioFog 3.0</h4>
-              </div>
+function WhatsNew() {
+  return (
+    <section className="whats-new">
+      <section className="container">
+        <section className="row">
+          <section className="col-12">
+            <div className="sections__header">
+              <h4>What&apos;s New in ioFog 3.7</h4>
+            </div>
 
-              <div className="links__container row">
-                {links.map((link, index) => (
-                  <a href={link.href} key={index} className="link">
-                    <div className="link__card">
-                      <div className="link__title">{link.label}</div>
-                      <div className="link__description">
-                        {link.description}
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </section>
+            <div className="links__container">
+              {highlights.map((item) => (
+                <Link to={item.href} key={item.label} className="link">
+                  <div className="link__card">
+                    <div className="link__tag">{item.tag}</div>
+                    <div className="link__title">{item.label}</div>
+                    <div className="link__description">{item.description}</div>
+                    <div className="link__cta">Explore feature</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </section>
         </section>
       </section>
-    );
-  }
+    </section>
+  );
 }
 
 export default WhatsNew;
