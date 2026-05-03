@@ -45,7 +45,7 @@ spec:
     realm: realm-name
     realmKey: realm-key
     ssl: external
-    controllerClient: pot-controller
+    controllerClient: iofog-controller
     controllerSecret:
     viewerClient: ecn-viewer
   events:  # enable/disable or configure controller audit events
@@ -160,7 +160,7 @@ spec:
 
 <aside class="notifications danger">
   <h3><img src="/images/icos/ico-danger.svg" alt=""> Router and NATS TLS</h3>
-  <p>By default, Router and NATS instances are deployed with TLS. If you do not provide your own CA, the operator creates self-signed certificates. To use your own CA, create Kubernetes secrets `pot-site-ca` and `default-router-local-ca` in the Control Plane namespace. See [Certificates for Router and NATS](../security/certificates-manager.html).</p>
+  <p>By default, Router and NATS instances are deployed with TLS. If you do not provide your own CA, the operator creates self-signed certificates. To use your own CA, create Kubernetes secrets `iofog-site-ca` and `default-router-local-ca` in the Control Plane namespace. See [Certificates for Router and NATS](../security/certificates-manager.html).</p>
 </aside>
 
 ## Remote Control Plane
@@ -325,7 +325,7 @@ spec:
     realm: realm-name
     realmKey: realm-key
     ssl: external
-    controllerClient: pot-controller
+    controllerClient: iofog-controller
     controllerSecret:
     viewerClient: ecn-viewer
   nats:
@@ -402,7 +402,7 @@ spec:
     realm: realm-name
     realmKey: realm-key
     ssl: external
-    controllerClient: pot-controller
+    controllerClient: iofog-controller
     controllerSecret:
     viewerClient: ecn-viewer
   nats:
@@ -474,7 +474,7 @@ spec:
     realm: realm-name
     realmKey: realm-key
     ssl: external
-    controllerClient: pot-controller
+    controllerClient: iofog-controller
     controllerSecret:
     viewerClient: ecn-viewer
   controllers:
